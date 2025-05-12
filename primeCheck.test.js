@@ -14,11 +14,14 @@ describe("isPrime()", () => {
         // boundaries
         // representative sample
         // edge cases
-        expect(isPrime(2)).toBe(true);
-        expect(isPrime(3)).toBe(true);
-        expect(isPrime(97)).toBe(true);
-        expect(isPrime(9999999967)).toBe(true);
-        expect(isPrime(7919)).toBe(true);
+        const primes = [2, 3, 97, 9999999967, 7919];
+        primes.forEach(prime => expect(isPrime(prime)).toBe(true));
+        // expect(isPrime(2)).toBe(true);
+        // expect(isPrime(3)).toBe(true);
+        // expect(isPrime(97)).toBe(true);
+        // expect(isPrime(9999999967)).toBe(true);
+        // expect(isPrime(7919)).toBe(true);
+        expect(isPrime(561)).toBe(false);
     });
 
     test("should be false for non-integer or invalid input types", () => {
